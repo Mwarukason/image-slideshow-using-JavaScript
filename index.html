@@ -3,18 +3,18 @@
 <head>
 	<title>slideshow</title>
 	<script>
-		var i=0;
-		var img=[]; //image array
+		var i = 0; //initiate a point
+		var img = []; // create image array
 		var time = 2000;
 
 		//list
-		img[0] = ;
-		img[1] = ;
-		img[2] = ;
-		img[2] = ;
-		img[4] = ;
+		img[0] = 'football.png';
+		img[1] = 'basketball.jpg';
+		img[2] = 'volleyball.png';
+		img[2] = 'crecket.jpg';
+		img[4] = 'molten-netball.png';
 
-		function slideshow(){
+		function slideshowT(){
 			document.slide.src = img[i];
 
 			if (i < img.length - 1) {
@@ -22,8 +22,9 @@
 			}else {
 				i = 0;
 			}
-			}
+			setTimeout("slideshowT()", time);
 		}
+		window.onload = slideshowT;
 	</script>
 </head>
 <body>
